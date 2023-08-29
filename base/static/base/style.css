@@ -1,0 +1,161 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+/* Reset some default styles */
+body, h1, h2, h3, ul, li, p {
+    margin: 0;
+    padding: 0;
+}
+
+/* Common Styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #181818; /* Dark background color */
+    color: #fff;
+}
+
+/* Top Bar */
+.top-bar {
+    padding-top: 70px; /* Adjust padding as needed */
+}
+
+/* Top Navigation */
+.top-nav {
+    background-color: #1e1e1e;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: #fff;
+}
+
+.top-nav-links {
+    list-style: none;
+    display: flex;
+    padding-left: 12px;
+}
+
+.top-nav-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+    margin-right: 20px;
+}
+
+/* Left-Side Navigation */
+.side-nav {
+    background-color: #111;
+    width: 250px;
+    height: 100vh;
+    padding: 30px 10px;
+    padding-top: 60px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 99;
+}
+
+.side-nav-logo {
+    text-align: center;
+    margin-bottom: 20px;
+    font-size: 20px;
+    color: #fff;
+}
+
+.side-nav-links {
+    list-style: none;
+    padding-left: 10px;
+    opacity: 0.8;
+}
+
+.side-nav-links li {
+    margin-bottom: 15px;
+}
+
+.side-nav-links a {
+    text-decoration: none;
+    color: #bbb;
+    font-weight: bold;
+    display: block;
+    transition: color 0.3s ease;
+}
+
+.side-nav-links a:hover {
+    color: #fff;
+}
+
+.main-content {
+    position: absolute;
+    top: 39px;
+    left: 269px;
+    right: 0;
+    bottom: 0; 
+    padding: 20px;
+    background-color: #252525; 
+    border-radius: 5px; 
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5); 
+    color: #ddd; 
+    overflow: auto; 
+}
+
+/* Media query for small screens */
+@media screen and (max-width: 768px) {
+    .side-nav {
+        width: 0;
+    }
+
+    .main-content {
+        margin-left: 0;
+    }
+
+    .top-nav {
+        padding: 10px 10px;
+    }
+
+    .top-nav-links a {
+        margin-right: 10px;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    .side-nav-logo {
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+
+    .side-nav-links li {
+        margin-bottom: 10px;
+    }
+}
+
+.logo-link {
+    text-decoration: none;
+}
+
+.logo-text-white {
+    color: white;
+}
+
+.logo-text-red {
+    color: red;
+}
+
+.logo-link:visited .logo-text-red {
+    color: #ff3333; /* Change the color for visited links */
+}
+
